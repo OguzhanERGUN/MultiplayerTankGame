@@ -13,13 +13,14 @@ public class InputReader : ScriptableObject, IPlayerActions
 
 	private void OnEnable()
 	{
+		//Challange should watch
 		if (controls != null)
 		{
 			controls = new Controls();
 			controls.Player.SetCallbacks(this);
 		}
 
-		controls.Player.Enable();
+		controls?.Player.Enable();
 	}
 	public void OnMove(InputAction.CallbackContext context)
 	{
