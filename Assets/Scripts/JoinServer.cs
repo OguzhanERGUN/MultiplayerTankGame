@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class JoinServer : MonoBehaviour
 {
-    [SerializeField] private Button clientButton;
-    [SerializeField] private Button hostButton;
-    [SerializeField] private Button disconnectButton;
 
 	public void StartHost()
     {

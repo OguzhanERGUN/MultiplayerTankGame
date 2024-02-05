@@ -9,12 +9,13 @@ using static Controls;
 public class InputReader : ScriptableObject, IPlayerActions
 {
 	public event Action<bool> primaryFireEvent;
+	public event Action<Vector2> moveEvent;
 	private Controls controls;
 
 	private void OnEnable()
 	{
 		//Challange should watch
-		if (controls != null)
+		if (controls == null)
 		{
 			controls = new Controls();
 			controls.Player.SetCallbacks(this);
@@ -24,7 +25,7 @@ public class InputReader : ScriptableObject, IPlayerActions
 	}
 	public void OnMove(InputAction.CallbackContext context)
 	{
-		throw new System.NotImplementedException();
+		moveEvent?.Invoke(context.ReadValue<Vector2>());
 	}
 
 	public void OnPrimaryFire(InputAction.CallbackContext context)
