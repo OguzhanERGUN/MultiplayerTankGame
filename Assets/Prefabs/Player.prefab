@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 2674863743215500516}
   - component: {fileID: 7199689002724042448}
   - component: {fileID: 9004125808992579033}
+  - component: {fileID: -4454220428736244256}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -439,6 +440,20 @@ MonoBehaviour:
   rb: {fileID: 1148456768333961573}
   movementSpeed: 400
   turningRate: 270
+--- !u!114 &-4454220428736244256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498220655076278219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ed7ca0f844a7146988bce3a0b78d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretTransform: {fileID: 703821201109870814}
+  InputReader: {fileID: 11400000, guid: d9a01adf541d20c4c92500109838b6ba, type: 2}
 --- !u!1 &7980495309257311083
 GameObject:
   m_ObjectHideFlags: 0
