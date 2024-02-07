@@ -6,9 +6,14 @@ using UnityEngine;
 public class ClientNetworkTransform : NetworkTransform
 {
 
+	protected override bool OnIsServerAuthoritative()
+	{
+		return false;
+	}
+
 	public override void OnNetworkSpawn()
 	{
-		base.OnNetworkDespawn();
+		base.OnNetworkSpawn();
 		CanCommitToTransform = IsOwner;
 	}
 
@@ -27,8 +32,5 @@ public class ClientNetworkTransform : NetworkTransform
 			}
 		}
 	}
-	protected override bool OnIsServerAuthoritative()
-	{
-		return false;
-	}
+	
 }
